@@ -76,11 +76,4 @@
 ---
 
 ## 포함하지 않은 의존 코드
-`NetworkManager`, `GameManager`, `UIInteractionManager`, `UIInteractionManager_Room`, `UI_PlayerInteraction`, `UI_WebView`, `ButtonControl`, `UTILS`(HTTP 요청), `Suncheon.WebData`(요청·응답 데이터 클래스), `PlayerManager`, `PlayerMoveManager`, `PlayerAnimManager`, `CameraManager`, `UI_YesNoPopUp`, `VoteObject`, `VoteSelectBtn`, `Outline`, 스크린샷 에셋, Photon PUN 2
-
-## 알려진 한계 및 개선 방향
-- **WebGL 다운로드 호출**: `Application.ExternalCall`은 폐기 예정 API다. `.jslib` 플러그인과 `DllImport("__Internal")` 방식으로 바꾸는 것이 맞다.
-- **머티리얼 직접 수정**: 벽지·바닥 색상을 공유 머티리얼 에셋에 직접 적용한다. 서재 입장 시 기본 색으로 초기화해 문제를 피했지만, 런타임 머티리얼 인스턴스를 쓰는 편이 안전하다.
-- **플레이어 생성 대기 방식**: 여러 컴포넌트가 내 플레이어가 생성될 때까지 매 프레임 확인한다. 플레이어 생성 이벤트를 구독하는 방식으로 바꿀 수 있다.
-- **추천도서 본인 글 판정**: 닉네임으로 판정한다. 방명록처럼 유저 ID로 판정하는 편이 안전하다.
-- **신고 처리**: 서버 응답 전에 화면에서 먼저 블라인드 처리한다. 실패 시 되돌리는 처리가 없다.
+`NetworkManager`, `GameManager`, `UIInteractionManager`, `UIInteractionManager_Room`, `UI_PlayerInteraction`, `UI_WebView`, `ButtonControl`, `UTILS`(HTTP 요청), `Suncheon.WebData`(요청·응답 데이터 클래스), `PlayerManager`, `PlayerMoveManager`, `PlayerAnimManager`, `CameraManager`, `UI_YesNoPopUp`, `VoteObject`, `VoteSelectBtn`, `Outline`, 스크린샷 에셋, Photon PUN 2 등
